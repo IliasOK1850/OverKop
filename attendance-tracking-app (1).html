@@ -1,15 +1,13 @@
-<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aanwezigheidsregistratie</title>
+    <title>Aanwezigheid/title>
     <style>
         @font-face {
             font-family: 'Qanelas Soft';
             src: local('Qanelas Soft');
-            /* Hier kun je een link naar het lettertype toevoegen als je het hebt */
-        }
+https://font.download/font/qanelas-soft        }
         
         * {
             box-sizing: border-box;
@@ -19,7 +17,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #000A69;
         }
         
         .container {
@@ -70,14 +68,14 @@
         }
         
         button {
-            background-color: #4CAF50;
+            background-color: #5CE1E6;
             color: white;
             border: none;
             cursor: pointer;
         }
         
         button:hover {
-            background-color: #45a049;
+            background-color: #3DBA8D;
         }
         
         table {
@@ -174,13 +172,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Aanwezigheidsregistratie</h1>
+        <h1>Aanwezigheid</h1>
         
         <div class="tabs">
             <div class="tab active" data-tab="register">Registreren</div>
-            <div class="tab" data-tab="view">Overzicht</div>
-            <div class="tab" data-tab="export">Exporteren</div>
-            <div class="tab" data-tab="settings">Instellingen</div>
+            <div class="tab active" data-tab="view">Overzicht</div>
+            <div class="tab active" data-tab="export">Exporteren</div>
+            <div class="tab active" data-tab="settings">Instellingen</div>
         </div>
         
         <div id="register" class="tab-content active">
@@ -191,10 +189,15 @@
                 <p>Terugkerende bezoekers: <span id="returning-visitors">0</span></p>
             </div>
             
-            <h2>Nieuwe aanwezigheid</h2>
+            <h2>Aanwezigheid</h2>
             <div class="form-group">
                 <label for="firstName">Voornaam:</label>
                 <input type="text" id="firstName" placeholder="Voornaam" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sexe">Geslacht:</label>
+                <input type="text" id="sexe" placeholder="Geslacht" required>
             </div>
             
             <div class="form-group">
