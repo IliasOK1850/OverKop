@@ -1,0 +1,71 @@
+body {
+    font-family: 'Qanelas Soft', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.tabs {
+    display: flex;
+    background-color: #333;
+}
+
+.tablink {
+    flex: 1;
+    padding: 14px 16px;
+    text-align: center;
+    color: white;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.tablink:hover {
+    background-color: #575757;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    animation: fadeEffect 0.5s;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

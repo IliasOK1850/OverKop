@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanwezigheidsapp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Qanelas+Soft:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Aanwezigheid')">Aanwezigheid</button>
+        <button class="tablink" onclick="openTab(event, 'NieuwePersonen')">Nieuwe Personen</button>
+        <button class="tablink" onclick="openTab(event, 'Instellingen')">Instellingen</button>
+    </div>
+
+    <div id="Aanwezigheid" class="tabcontent">
+        <h2>Aanwezigheid Bijhouden</h2>
+        <form id="attendanceForm">
+            <input type="text" id="name" placeholder="Voornaam" required>
+            <input type="number" id="age" placeholder="Leeftijd" required>
+            <select id="gender">
+                <option value="M">Man</option>
+                <option value="V">Vrouw</option>
+                <option value="X">Niet-binair</option>
+            </select>
+            <input type="text" id="city" placeholder="Gemeente" list="cityList" required>
+            <datalist id="cityList"></datalist>
+            <input type="date" id="date" required>
+            <button type="submit">Toevoegen</button>
+        </form>
+        <button id="exportBtn">Exporteren naar Excel</button>
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Leeftijd</th>
+                    <th>Geslacht</th>
+                    <th>Gemeente</th>
+                    <th>Datum</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="NieuwePersonen" class="tabcontent">
+        <h2>Nieuwe Personen</h2>
+        <p>Hier kun je zien wie voor het eerst aanwezig is.</p>
+        <table id="newPersonsTable">
+            <thead>
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Leeftijd</th>
+                    <th>Geslacht</th>
+                    <th>Gemeente</th>
+                    <th>Datum</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="Instellingen" class="tabcontent">
+        <h2>Instellingen</h2>
+        <p>Upload hier een CSV-bestand met Belgische gemeenten.</p>
+        <input type="file" id="uploadCSV" accept=".csv">
+        <button id="uploadBtn">Upload CSV</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
